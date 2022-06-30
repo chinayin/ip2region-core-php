@@ -1,0 +1,13 @@
+parameters:
+  level: 5
+  checkMissingIterableValueType: false
+  checkFunctionNameCase: true
+  reportUnmatchedIgnoredErrors: false
+  checkGenericClassInNonGenericObjectType: false
+  inferPrivatePropertyTypeFromConstructor: true
+  treatPhpDocTypesAsCertain: false
+  paths:
+    - src
+    - tests
+  ignoreErrors:
+    - '#PHPDoc tag .* has invalid value.*#'
