@@ -1,6 +1,14 @@
-### ip2region SDK for PHP
+# ip2region SDK for PHP
+
+[![Author](https://img.shields.io/badge/author-@chinayin-blue.svg)](https://github.com/chinayin)
+[![Software License](https://img.shields.io/badge/license-Apache--2.0-brightgreen.svg)](LICENSE)
+[![Latest Version](https://img.shields.io/packagist/v/chinayin/ip2region-core.svg)](https://packagist.org/packages/chinayin/ip2region-core)
+[![Total Downloads](https://img.shields.io/packagist/dt/chinayin/ip2region-core.svg)](https://packagist.org/packages/chinayin/ip2region-core)
+![php 7.1+](https://img.shields.io/badge/php-min%207.1-red.svg)
 
 ### Installation
+
+运行环境要求 PHP 7.1 及以上版本，以及[cURL](http://php.net/manual/zh/book.curl.php)。
 
 #### 官方原生查询包
 
@@ -12,7 +20,7 @@
 
 特点：`xdb数据`封装在composer包内，数据会不定期更新
 
-使用方法：[chinayin/ip2region](https://github.com/chinayin/ip2region-sdk-php)
+使用方法：[github.com/chinayin/ip2region](https://github.com/chinayin/ip2region-sdk-php)
 
 > composer require chinayin/ip2region
 
