@@ -76,6 +76,8 @@ throw new \RuntimeException("failed to load vector index from '$xdb'.");
 如果你的 PHP 母环境支持，可以预先加载整个 xdb 的数据到内存，这样可以实现完全基于内存的查询，类似之前的 memory search 查询。
 
 ```php
+use ip2region\XdbSearcher;
+
 $ip = '1.2.3.4';
 $xdb = './ip2region.xdb';
 try {
