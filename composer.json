@@ -36,7 +36,6 @@
     "lint": "vendor/bin/php-cs-fixer fix -v",
     "analyse": "vendor/bin/phpstan analyse",
     "travis": [
-      "composer test",
       "composer lint",
       "composer analyse"
     ]
