@@ -122,20 +122,18 @@ class XdbSearcher
         if ($this->vectorIndex != null) {
             $sPtr = self::getLong($this->vectorIndex, $idx);
             $ePtr = self::getLong($this->vectorIndex, $idx + 4);
+        } elseif ($this->contentBuff != null) {
+            $sPtr = self::getLong($this->contentBuff, self::HeaderInfoLength + $idx);
+            $ePtr = self::getLong($this->contentBuff, self::HeaderInfoLength + $idx + 4);
         } else {
-            if ($this->contentBuff != null) {
-                $sPtr = self::getLong($this->contentBuff, self::HeaderInfoLength + $idx);
-                $ePtr = self::getLong($this->contentBuff, self::HeaderInfoLength + $idx + 4);
-            } else {
-                // read the vector index block
-                $buff = $this->read(self::HeaderInfoLength + $idx, 8);
-                if ($buff === null) {
-                    throw new \Exception("failed to read vector index at ${idx}");
-                }
-
-                $sPtr = self::getLong($buff, 0);
-                $ePtr = self::getLong($buff, 4);
+            // read the vector index block
+            $buff = $this->read(self::HeaderInfoLength + $idx, 8);
+            if ($buff === null) {
+                throw new \Exception("failed to read vector index at ${idx}");
             }
+
+            $sPtr = self::getLong($buff, 0);
+            $ePtr = self::getLong($buff, 4);
         }
 
         // printf("sPtr: %d, ePtr: %d\n", $sPtr, $ePtr);
