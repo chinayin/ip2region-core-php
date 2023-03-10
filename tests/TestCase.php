@@ -21,5 +21,4 @@ class TestCase extends \PHPUnit\Framework\TestCase
     {
         return microtime(true) * 1000;
     }
-
 }

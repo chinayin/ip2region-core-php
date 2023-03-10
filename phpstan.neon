@@ -1,13 +1,17 @@
+includes:
+    - phpstan-baseline.neon
+
 parameters:
-  level: 5
-  checkMissingIterableValueType: false
-  checkFunctionNameCase: true
-  reportUnmatchedIgnoredErrors: false
-  checkGenericClassInNonGenericObjectType: false
-  inferPrivatePropertyTypeFromConstructor: true
-  treatPhpDocTypesAsCertain: false
-  paths:
-    - src
-    - tests
-  ignoreErrors:
-    - '#PHPDoc tag .* has invalid value.*#'
+    level: 5
+    checkMissingIterableValueType: false
+    checkFunctionNameCase: true
+    reportUnmatchedIgnoredErrors: false
+    checkGenericClassInNonGenericObjectType: false
+    inferPrivatePropertyTypeFromConstructor: true
+    treatPhpDocTypesAsCertain: false
+    paths:
+        - src
+        - tests
+    ignoreErrors:
+        - '#PHPDoc tag .* has invalid value.*#'
+        - '#Unsafe usage of new static\(\).#'

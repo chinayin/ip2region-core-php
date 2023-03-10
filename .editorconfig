@@ -1,11 +1,15 @@
-# EditorConfig is awesome: http://EditorConfig.org
 root = true
 
 [*]
-end_of_line = lf
-insert_final_newline = true
-
-[**.{php,md}]
 charset = utf-8
+end_of_line = lf
 indent_style = space
 indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+max_line_length = 80
+
+[*.{json,yml}]
+indent_size = 2

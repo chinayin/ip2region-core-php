@@ -21,9 +21,9 @@ return (new PhpCsFixer\Config())
     ->setUsingCache(true)
     ->setRiskyAllowed(true)
     ->setRules([
+        '@PSR12' => true,
         '@PHP71Migration' => true,
         '@PHPUnit75Migration:risky' => true,
-        '@PSR12' => true,
         'header_comment' => ['header' => $fileHeaderComment],
     ])
     ->setFinder(
